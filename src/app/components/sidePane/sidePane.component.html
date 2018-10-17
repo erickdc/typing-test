@@ -1,0 +1,24 @@
+
+  <div class="row">
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col">
+        <div class="card">
+            <div class="card-header">
+                Real Time Information
+            </div>
+            <div class="card-body">
+                <p [hidden]="inputService.started"  class="card-text text-info">Start typing sample text to begin test</p>
+
+                <p class="text-success">Timer: {{ticks}} seconds</p>
+
+                <p class="text-success">Amount of words: {{amountOfWords - 1}}</p>
+
+                <p *ngIf="inputService.ended" class="text-success">Words-Per-Minute: {{calculateWordPerMinute()}}</p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+
